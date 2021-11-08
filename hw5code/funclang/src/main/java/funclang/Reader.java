@@ -165,7 +165,7 @@ public class Reader {
 		{
 			System.out.println("Problem finding file. Error: "+e);
 		}
-		//bash.addToHistory(programText);
+		bash.addToHistory(programText);
 
 		List<String> result = new ArrayList<>();
 		for (int i = 0; i < programTextList.size(); i++){
