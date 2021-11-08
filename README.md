@@ -8,3 +8,9 @@ These are the key functionalities added:
 3. Changes to the Reader allows functionality to read multiple lines and can even ignore lines starting with #
 4. Typing !read <filename> can allow you to read from a well formatted file with programs written over multiple lines with # for comments, these will be saved to your bash history
 
+Regarding Key Bindings:
+  
+  The RobotKeyboard class contains all the key bindings and they might not fit into every keyboard, so you will need to edit the key bindings according to your keyboard
+  For instance, if you need to press 'Shift' + '=' to get a '+', then in the type method you might need to enter:
+    case '+': doType(VK_SHIFT, VK_EQUALS); break;
+  This is already implemented, however, other key bindings may differ.
