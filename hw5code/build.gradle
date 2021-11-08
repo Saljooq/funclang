@@ -16,6 +16,12 @@ subprojects {
     }
 
     dependencies {
-        antlr "org.antlr:antlr4:4.5" 
+        antlr "org.antlr:antlr4:4.5"
+
+        compile fileTree(include: ['*.jar'], dir: 'libs')
     }
 }
+
+dependencies {
+}
+

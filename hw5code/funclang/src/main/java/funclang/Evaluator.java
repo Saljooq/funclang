@@ -78,7 +78,7 @@ public class Evaluator implements Visitor<Value> {
 		try {
 			for(DefineDecl d: p.decls())
 				d.accept(this, initEnv);
-			return (Value) p.e().accept(this, initEnv);
+			return  (Value) p.e().accept(this, initEnv);
 		} catch (ClassCastException e) {
 			return new DynamicError(e.getMessage());
 		}
@@ -129,6 +129,15 @@ public class Evaluator implements Visitor<Value> {
 
 	@Override
 	public Value visit(LambdaExp e, Env env) { // New for funclang.
+
+		e.count++;
+		if (e.count > 3)
+		{
+			e.count = 0;
+			return new Value.DynamicError("Infinite recursion");
+		}
+
+
 		return new Value.FunVal(env, e.formals(), e.body());
 	}
 
