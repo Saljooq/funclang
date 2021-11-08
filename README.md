@@ -10,7 +10,10 @@ These are the key functionalities added:
 
 Regarding Key Bindings:
   
-  The RobotKeyboard class contains all the key bindings and they might not fit into every keyboard, so you will need to edit the key bindings according to your keyboard
-  For instance, if you need to press 'Shift' + '=' to get a '+', then in the type method you might need to enter:
-    case '+': doType(VK_SHIFT, VK_EQUALS); break;
+  The RobotKeyboard class contains all the key bindings and they might not fit into every keyboard, so you will need to edit the key bindings according to your keyboard\
+  \
+  For instance, if you need to press 'Shift' + '=' to get a '+', then in the 'type' method you might need to make an entry that looks like this:\
+  \
+  case '+': doType(VK_SHIFT, VK_EQUALS); break;\
+  \
   This is already implemented, however, other key bindings may differ.
