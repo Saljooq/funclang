@@ -8,11 +8,6 @@ public class RobotKeyboard {
 
     private Robot robot;
 
-//    public static void main(String... args) throws Exception {
-//        RobotKeyboard keyboard = new RobotKeyboard();
-//        keyboard.type("Hello there, how are you?");
-//    }
-
     public RobotKeyboard() throws AWTException {
         this.robot = new Robot();
     }
